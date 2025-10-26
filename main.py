@@ -11,7 +11,9 @@ app = Flask(__name__)
 UPLOAD_FOLDER = 'uploads'
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
-app.config['MAX_CONTENT_LENGTH'] = 50 * 1024 * 1024  # 50 MB max upload
+# Allow uploads up to 1 GB (1 * 1024 * 1024 * 1024 bytes)
+app.config['MAX_CONTENT_LENGTH'] = 1 * 1024 * 1024 * 1024
+  # 50 MB max upload
 
 ALLOWED_EXTENSIONS = {'mp3', 'wav', 'ogg'}
 
