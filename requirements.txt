@@ -4,3 +4,5 @@ autopep8
 
 # App
 flask
+psycopg2-binary==2.9.9
+python-dotenv==1.1.0
